@@ -1,17 +1,13 @@
-Here’s a polished, drop-in **README.md** you can paste into your repo.
-It documents the app, the local setup, endpoints, and the OpenAI/prompt-engineering topics from your slide.
-
----
-
 # Stocktopus — AI-assisted Stock Summary (Vite + Express)
+***This is not real financial advice!***
 
-Eight arms, zero clue… somehow right. 🐙
+Eight arms, zero clue… somehow right. 
 Stocktopus fetches recent OHLC data for one or more tickers and asks an LLM to write a concise, human-readable report (buy/hold/sell).
 It’s built as a secure **Vite (frontend)** + **Express (backend)** app so API keys stay private.
 
 ---
 
-## ✨ Features
+## Features
 
 * Add one or more stock tickers (e.g., `AAPL`, `TSLA`) and auto-fetch recent aggregates.
 * Server-side proxy to **Polygon.io** (keeps your key off the client).
@@ -21,7 +17,7 @@ It’s built as a secure **Vite (frontend)** + **Express (backend)** app so API 
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 * Frontend: **Vite**, vanilla JS, HTML/CSS
 * Backend: **Express**, Node 18+
@@ -30,7 +26,7 @@ It’s built as a secure **Vite (frontend)** + **Express (backend)** app so API 
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 project-root/
@@ -48,7 +44,7 @@ project-root/
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -61,7 +57,7 @@ OPENAI_API_KEY=your_openai_key_here
 
 ---
 
-## 🚀 Local Development
+## Local Development
 
 1. **Install dependencies**
 
@@ -93,7 +89,7 @@ npm run dev
 
 ---
 
-## 🔌 API Endpoints (Dev)
+## API Endpoints (Dev)
 
 ### `GET /api/agg/:ticker`
 
@@ -141,7 +137,7 @@ Generate a short stock report via OpenAI.
 
 ---
 
-## 🧭 Frontend Flow (simplified)
+## Frontend Flow (simplified)
 
 ```mermaid
 flowchart LR
@@ -153,7 +149,7 @@ flowchart LR
 
 ---
 
-## 🔒 Why keys never live in the browser
+## Why keys never live in the browser
 
 * **Frontend → Backend** only (no direct OpenAI/Polygon calls from client).
 * **Express** reads `.env` and talks to external APIs.
@@ -161,7 +157,7 @@ flowchart LR
 
 ---
 
-## 🛠 Scripts
+## Scripts
 
 ```json
 {
@@ -178,7 +174,7 @@ flowchart LR
 
 ---
 
-## 🧪 Quick Smoke Tests
+## Quick Smoke Tests
 
 * Polygon proxy works:
 
@@ -205,7 +201,7 @@ flowchart LR
 
 ---
 
-## 📚 Learning Notes — OpenAI API Essentials (from the slide)
+## Learning Notes — OpenAI API Essentials 
 
 ### 1) How to use the OpenAI API
 
@@ -281,7 +277,7 @@ flowchart LR
 
 ---
 
-## 🗺️ Roadmap / Ideas
+## Roadmap / Ideas
 
 * Add ticker removal & validation UI.
 * Persist recent tickers in `localStorage`.
@@ -291,13 +287,13 @@ flowchart LR
 
 ---
 
-## 📝 License
+## License
 
 MIT — do what you like, but no warranty.
 
 ---
 
-## 🙌 Credits
+## Credits
 
 Built with ❤️ using Vite + Express.
 Data by [Polygon.io]. LLM magic by OpenAI.
